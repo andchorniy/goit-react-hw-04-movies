@@ -50,11 +50,11 @@ class MovieDetails extends Component{
             <div>
                 <h2>Additional information</h2>
                 <ul>
-                    <li><Link to={`${match.url}/cast`}>Cast</Link></li>
-                    <li><Link to={`${match.url}/reviews`}>Review</Link></li>
+                    <li><Link to={{pathname: `${match.url}/cast`, state:{from: this.props.location.state?.from || routes.home}}}>Cast</Link></li>
+                    <li><Link to={{pathname: `${match.url}/reviews`, state:{from: this.props.location.state?.from || routes.home}}}>Review</Link></li>
                 </ul>
                 <Switch>
-                    <Route path={routes.cast} render={props=> <Cast {...props} cast={this.state.cast}/>}/>
+                    <Route path={routes.cast} render={props=> <Cast {...props}  cast={this.state.cast}/>}/>
                     <Route path={routes.review} render={props=> this.state.review.length ? <Review {...props} reviews={this.state.review}/> : <p>No reviews</p>}/>
                 </Switch>
             </div>

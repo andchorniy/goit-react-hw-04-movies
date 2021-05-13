@@ -1,6 +1,7 @@
 
 import style from './Review.module.css'
 const Review = ({reviews}) => {
+    
     return (
             <ul className={style.list}>
                 {reviews.map(review=> 
