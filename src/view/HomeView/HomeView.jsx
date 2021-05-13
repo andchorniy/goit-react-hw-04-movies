@@ -1,7 +1,6 @@
 import  { Component } from 'react';
-import { Link } from 'react-router-dom';
 import api from '../../Api/api'
-// import routes from "../../routes";
+import MoviesList from '../../components/MoviesList'
 
 class HomeView extends Component {
     state ={
@@ -16,9 +15,9 @@ class HomeView extends Component {
         return (
             <div>
                 <h1>Popular movies</h1>
-                <ul>
-                    {this.state.movies.map(movie=> <li key={movie.id}> <Link to={`/movies/${movie.id}`}> {movie.title ?? movie.original_name } </Link></li> )}
-                </ul>
+                
+                    <MoviesList movies={this.state.movies} location={this.props.location} />
+                
             </div>
     );
     }

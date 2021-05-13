@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.button {
+  width: 100px;
+  padding: 10px;
+  border: none;
+  background: palevioletred;
+  color: aliceblue;
+  margin-bottom: 15px;
+}
+.movie {
+  display: flex;
+}
+.descr {
+  margin-left: 30px;
+}
+.header,
+.score,
+.overview,
+.genresList {
+  margin-bottom: 20px;
+}
+h2 {
+  margin-bottom: 10px;
+}

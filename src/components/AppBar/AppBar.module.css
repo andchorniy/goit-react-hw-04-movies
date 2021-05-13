@@ -1,0 +1,11 @@
+.nav {
+  padding: 15px;
+}
+.navLink {
+  text-decoration: none;
+  color: gray;
+  font-size: 24px;
+}
+.activeNavLink {
+  color: palevioletred;
+}
