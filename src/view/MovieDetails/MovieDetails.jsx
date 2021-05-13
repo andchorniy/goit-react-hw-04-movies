@@ -55,7 +55,7 @@ class MovieDetails extends Component{
                 </ul>
                 <Switch>
                     <Route path={routes.cast} render={props=> <Cast {...props} cast={this.state.cast}/>}/>
-                    <Route path={routes.review} render={props=> this.state.review !== [] ? <Review {...props} reviews={this.state.review}/> : <p>No reviews</p>}/>
+                    <Route path={routes.review} render={props=> this.state.review.length ? <Review {...props} reviews={this.state.review}/> : <p>No reviews</p>}/>
                 </Switch>
             </div>
         </div>
